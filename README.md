@@ -10,7 +10,7 @@ Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, r�
 
 ## Bắt đầu nhanh
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+Dùng [starter PostgreSQL + pgvector](starter/README.md) để chạy pipeline Python đã kết nối sẵn, hoặc thay bằng vector store tương đương. Starter hiện có corpus OpenStax trong `starter/data/raw/`, manifest, benchmark 20 câu và bước preflight không gọi API; xem hướng dẫn để biết phạm vi và các phần còn cần chạy/chấm thủ công.
 
 ## 1. Xây pipeline
 
@@ -28,8 +28,8 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 
 ## 3. Chuẩn bị bài nộp
 
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
+1. Chạy preflight, sau đó chạy pipeline đầy đủ và lưu kết quả top-3, trace cùng nhãn đánh giá thủ công.
+2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và hoàn thiện [báo cáo cá nhân](report/individual/2A202603837_NguyenDinhTruong.md).
 3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
 
 ## Tài liệu hướng dẫn
