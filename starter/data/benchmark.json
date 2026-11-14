@@ -1,7 +1,7 @@
 {
   "dataset_id": "principles-data-science-chapter1-56p-v1",
   "prepared_at": "2026-11-14T15:09:42+07:00",
-  "evaluation_status": "not_run",
+  "evaluation_status": "completed",
   "page_numbering": "gold_page is the 1-based physical page number in the current 56-page PDF.",
   "source": {
     "source_id": "openstax-principles-data-science-2025-ch1-excerpt",
