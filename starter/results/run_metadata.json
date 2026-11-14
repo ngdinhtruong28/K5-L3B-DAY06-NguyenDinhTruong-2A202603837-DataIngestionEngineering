@@ -1,0 +1,66 @@
+{
+  "run_started_at": "2026-11-14T08:23:16.741964+00:00",
+  "python_version": "3.13.3",
+  "pypdf_version": "6.21.4",
+  "psycopg_version": "3.3.8",
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensions": 1536,
+  "document_embedding_task": "RETRIEVAL_DOCUMENT (Gemini) or same-model provider default",
+  "query_embedding_task": "RETRIEVAL_QUERY (Gemini) or same-model provider default",
+  "embedding_tokens": 37062,
+  "embedding_token_usage_complete": true,
+  "content_pages": 38,
+  "content_page_selection_declared": true,
+  "total_content_characters": 77152,
+  "metadata_fields": [
+    "chapter",
+    "section"
+  ],
+  "questions": 20,
+  "unique_document_texts_embedded": 316,
+  "embedding_seconds": 6.196269100000791,
+  "query_embedding_seconds": 8.436643100005313,
+  "store_write_seconds": 0.9399282000013045,
+  "ingestion_seconds": 8.025990399997681,
+  "retrieval_seconds": 1.9323675999876286,
+  "cost_usd": null,
+  "cost_per_1m_input_tokens_usd": null,
+  "cost_note": "Cost is computed only when a provider price is configured and token usage is reported.",
+  "vector_store": {
+    "engine": "PostgreSQL + pgvector",
+    "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector_version": "0.8.7",
+    "metric": "cosine",
+    "search": "exact"
+  },
+  "strategies": {
+    "A_fixed": {
+      "chunks": 189,
+      "average_chunk_characters": 447.8994708994709,
+      "minimum_chunk_characters": 51,
+      "median_chunk_characters": 500,
+      "p95_chunk_characters": 500,
+      "maximum_chunk_characters": 500,
+      "total_chunk_characters": 84653
+    },
+    "B_paragraph": {
+      "chunks": 129,
+      "average_chunk_characters": 597.8914728682171,
+      "minimum_chunk_characters": 17,
+      "median_chunk_characters": 700,
+      "p95_chunk_characters": 700,
+      "maximum_chunk_characters": 700,
+      "total_chunk_characters": 77128
+    },
+    "C_paragraph_filter": {
+      "chunks": 129,
+      "average_chunk_characters": 597.8914728682171,
+      "minimum_chunk_characters": 17,
+      "median_chunk_characters": 700,
+      "p95_chunk_characters": 700,
+      "maximum_chunk_characters": 700,
+      "total_chunk_characters": 77128
+    }
+  }
+}
