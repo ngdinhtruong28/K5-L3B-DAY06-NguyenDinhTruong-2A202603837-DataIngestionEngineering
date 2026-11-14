@@ -1,4 +1,4 @@
-strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+strategy,chunking,chunk_size,overlap,metadata,filter,embedding_model,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
+A,fixed character windows,500,50,"document_id; source; physical page; chapter; section; character offsets",none,"OpenAI text-embedding-3-small","Baseline. Fixed windows provide predictable context size; compare retrieval and coherence with paragraph chunks.","7/15 (46.7%)","11/15 (73.3%)","1/5 (20%)","4/5 (80%)","Run 2026-11-14; 189 chunks; 1536 dimensions; shared 37,062 input tokens across the run; provider cost not calculated because no price rate was recorded."
+B,paragraph-aware packing,700,0,"document_id; source; physical page; chapter; section; character offsets",none,"OpenAI text-embedding-3-small","Paragraph boundaries should preserve complete ideas better than fixed windows, with fewer chunks.","9/15 (60%)","12/15 (80%)","2/5 (40%)","4/5 (80%)","Run 2026-11-14; 129 chunks; same model/corpus/benchmark as A; provider cost not calculated because no price rate was recorded."
+C,paragraph-aware packing,700,0,"document_id; source; physical page; chapter; section; character offsets","Filter section only when the question names it","OpenAI text-embedding-3-small","Compared with B, section filtering should reduce off-section results for explicitly scoped questions; broad questions remain unfiltered.","9/15 (60%)","12/15 (80%)","2/5 (40%)","5/5 (100%)","Run 2026-11-14; 129 chunks; same chunks as B; all 3 filtered test questions returned top-3 hits satisfying section; provider cost not calculated because no price rate was recorded."
