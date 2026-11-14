@@ -1,0 +1,269 @@
+{
+  "dataset_id": "principles-data-science-chapter1-56p-v1",
+  "prepared_at": "2026-11-14T15:09:42+07:00",
+  "evaluation_status": "not_run",
+  "page_numbering": "gold_page is the 1-based physical page number in the current 56-page PDF.",
+  "source": {
+    "source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+    "title": "Principles of Data Science (Chapter 1 excerpt)",
+    "publisher": "OpenStax, Rice University",
+    "publication_year": 2025,
+    "source_path": "starter/data/raw/Principles-of-Data-Science.pdf",
+    "citation_url": "https://openstax.org/details/books/principles-data-science",
+    "license": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "attribution": "Adapted from OpenStax, Principles of Data Science (2025), Rice University. This chapter-1 benchmark and its short evidence excerpts are shared under CC BY-NC-SA 4.0."
+  },
+  "filter_metadata": {
+    "field": "section",
+    "type": "string",
+    "derivation": "Use explicit numbered section headings in the extracted source text and carry the latest heading forward to following pages; do not infer section values.",
+    "filter_policy": "Apply only when the question names a section. The section constraint is user input before retrieval, not derived from the answer or gold source."
+  },
+  "split_design": {
+    "method": "Question-level split prepared before any embedding run: 15 dev and 5 test questions. Test questions cover sections 1.3, 1.4, and 1.5.",
+    "dev_count": 15,
+    "test_count": 5,
+    "leakage_risk": "High within-topic overlap: all questions use one textbook chapter and some sections appear in both splits. The five-question test is illustrative, not statistically representative. Do not tune on test; section filters can make filtered retrieval easier."
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "direct",
+      "question": "Theo Mục 1.1, khoa học dữ liệu nghiên cứu những hoạt động chính nào để thu được thông tin có ý nghĩa?",
+      "expected_answer": "Thu thập, quản lý và phân tích các loại dữ liệu.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 19,
+      "evidence_quote": "how to collect, manage, and analyze data of all types"
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "paraphrase",
+      "question": "Vì sao người làm data science hiện nay cần hiểu nhiều hơn một khâu trong quy trình?",
+      "expected_answer": "Một nhà khoa học dữ liệu hoặc nhóm cần có chuyên môn ở cả thu thập, quản lý và phân tích dữ liệu.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 20,
+      "evidence_quote": "a data scientist or data science team will have some expertise in all three domains"
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "direct",
+      "question": "Theo sách, data collection là quá trình nào?",
+      "expected_answer": "Quá trình có hệ thống để thu thập thông tin về các biến quan tâm.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 21,
+      "evidence_quote": "Data collection is the systematic process of gathering information on variables of interest."
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "conditional",
+      "question": "Trong chu trình data science, hai công đoạn nào thường tốn nhiều thời gian và công sức nhất?",
+      "expected_answer": "Thu thập dữ liệu và chuẩn bị/làm sạch dữ liệu.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 21,
+      "evidence_quote": "the most time- and effort-consuming steps in the data science cycle"
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "paraphrase",
+      "question": "Data reporting nên trình bày dữ liệu theo hướng nào?",
+      "expected_answer": "Theo cách truyền đạt tốt nhất thông tin thu được từ phân tích dữ liệu.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 22,
+      "evidence_quote": "best convey the information learned from data analysis."
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "section": "1.1 What Is Data Science?",
+      "question_type": "direct",
+      "question": "Sách nêu những phương tiện trực quan nào có thể dùng để trình bày dữ liệu?",
+      "expected_answer": "Biểu đồ, đồ thị và bản đồ.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 22,
+      "evidence_quote": "charts, graphs, and maps"
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "section": "1.2 Data Science in Practice",
+      "question_type": "direct",
+      "question": "Walmart dùng phân tích dữ liệu lớn để hỗ trợ hai việc gì trong quản lý hàng hóa?",
+      "expected_answer": "Tìm hiểu mô hình/đặc điểm tiêu dùng và điều chỉnh lượng hàng tồn kho.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 23,
+      "evidence_quote": "investigate consumer patterns and adjust its inventories."
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "section": "1.2 Data Science in Practice",
+      "question_type": "direct",
+      "question": "Trong ví dụ đèn đường ở San Diego, cảm biến theo dõi những yếu tố nào?",
+      "expected_answer": "Lưu lượng giao thông, tình trạng chỗ đỗ xe, độ ẩm và nhiệt độ.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 24,
+      "evidence_quote": "sensors measure traffic, parking occupancy, humidity, and temperature"
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "paraphrase",
+      "question": "Theo phần định nghĩa, dữ liệu có thể được hiểu rộng là những gì?",
+      "expected_answer": "Bất cứ điều gì có thể được phân tích để tổng hợp thông tin hoặc hiểu biết.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 27,
+      "evidence_quote": "Anything that we can analyze to compile information"
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "conditional",
+      "question": "Chỉ xét Mục 1.3: nếu các giá trị phân loại có thứ tự, chúng thuộc loại nào?",
+      "expected_answer": "Ordinal data, vì các giá trị có quan hệ thứ tự.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 29,
+      "evidence_quote": "the set of possible values includes an ordering notion.",
+      "filter": {
+        "section": "1.3"
+      }
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "direct",
+      "question": "Ví dụ bảng dữ liệu có cấu trúc được nhận diện qua những đặc điểm nào?",
+      "expected_answer": "Mỗi bản ghi có cùng cấu trúc/thuộc tính và từng giá trị nằm trong ô của bảng.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 30,
+      "evidence_quote": "every individual item is in the same structure with the same three attributes"
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "conditional",
+      "question": "Trong Mục 1.3, vì sao danh sách truy vấn tìm kiếm có thể được xem là dữ liệu không cấu trúc?",
+      "expected_answer": "Mỗi mục có thể là văn bản tự do với độ dài và hình thức khác nhau.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 30,
+      "evidence_quote": "each entry in the dataset can be a freeform text",
+      "filter": {
+        "section": "1.3"
+      }
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "direct",
+      "question": "Theo Mục 1.3, JSON đặc biệt phù hợp cho mục đích trao đổi dữ liệu nào?",
+      "expected_answer": "Trao đổi dữ liệu giữa người dùng và máy chủ.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 31,
+      "evidence_quote": "JSON is the most suitable for exchanging data between a user and a server",
+      "filter": {
+        "section": "1.3"
+      }
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "paraphrase",
+      "question": "Khi nào cấu trúc XML được nêu là phù hợp hơn?",
+      "expected_answer": "Với bộ dữ liệu phức tạp có cấu trúc phân cấp.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 31,
+      "evidence_quote": "XML is the most suitable for complex dataset due to its hierarchy-friendly nature."
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "section": "1.3 Data and Datasets",
+      "question_type": "direct",
+      "question": "Thông tin metadata trong JSON/XML mô tả điều gì ngoài các bản ghi dữ liệu?",
+      "expected_answer": "Thông tin mô tả hoặc bối cảnh của chính bộ dữ liệu, chẳng hạn thời điểm tạo hay kiểu dữ liệu của cột.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 36,
+      "evidence_quote": "description(s) of the dataset itself as well (known as metadata)"
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "section": "1.3 Data and Datasets",
+      "question_type": "direct",
+      "question": "Trong ví dụ Iris ở Mục 1.3, có bao nhiêu quan sát dữ liệu, không tính dòng tiêu đề?",
+      "expected_answer": "150 quan sát; tổng 151 dòng bao gồm dòng tiêu đề.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 37,
+      "evidence_quote": "There are 151 rows in the dataset with the header row at the top, totaling 150 items.",
+      "filter": {
+        "section": "1.3"
+      }
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "section": "1.4 Using Technology for Data Science",
+      "question_type": "conditional",
+      "question": "Chỉ xét Mục 1.4: khi bảng tính không phù hợp với phân tích phức tạp, sách nêu lợi thế nào của ngôn ngữ lập trình?",
+      "expected_answer": "Ngôn ngữ lập trình phù hợp hơn để xử lý các phân tích phức tạp.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 39,
+      "evidence_quote": "better suited than spreadsheet programs to handle complex analyses.",
+      "filter": {
+        "section": "1.4"
+      }
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "section": "1.5 Data Science with Python",
+      "question_type": "direct",
+      "question": "Trong Pandas, Series khác DataFrame ở cách tổ chức dữ liệu bảng như thế nào?",
+      "expected_answer": "DataFrame dùng cho dữ liệu nhiều cột; Series dùng cho một cột.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 47,
+      "evidence_quote": "DataFrame is used for multi- column tabular data, Series is used for single-column data."
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "section": "1.5 Data Science with Python",
+      "question_type": "direct",
+      "question": "DataFrame.describe() cung cấp những loại thống kê tóm tắt nào theo mô tả trong sách?",
+      "expected_answer": "Số lượng, trung bình, độ lệch chuẩn, giá trị nhỏ nhất/lớn nhất và các phân vị.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 49,
+      "evidence_quote": "standard deviation (std), minimum and maximum values (min/max), and different quartiles"
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "section": "1.5 Data Science with Python",
+      "question_type": "conditional",
+      "question": "Trong Mục 1.5, nếu cần chọn theo cả chỉ số hàng và cột, iloc[] cho phép làm gì?",
+      "expected_answer": "Chọn dữ liệu bằng chỉ số của cả hàng và cột.",
+      "gold_source_id": "openstax-principles-data-science-2025-ch1-excerpt",
+      "gold_page": 51,
+      "evidence_quote": "select by both column and row, using column and row indices.",
+      "filter": {
+        "section": "1.5"
+      }
+    }
+  ]
+}
